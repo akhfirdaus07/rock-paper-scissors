@@ -5,19 +5,18 @@ let computerSelection;
 
 //create function to play 5 rounds of rock, paper, and scissor game
 function game(){
-    for (let i=0;i<5;i++){
-        // prompt input message to choose rock, paper, or scissor
-        playerSelection=prompt("Choose Rock, Paper, or Scissor?");
+    for (let i=0;i<1;i++){
+        // prompt input message to choose rock, paper, or scissor and store the player's choice in a variable
+        playerSelection=prompt("Choose Rock, Paper, or Scissor?").toLowerCase();
 
         // Randomly return either rock, paper, or scissor for the computer's choice
         computerSelection=choice[Math.floor(Math.random()*3)];
-        playRound(playerSelection,computerSelection);
+        return playRound(playerSelection,computerSelection);
     }
 }
 
 function playRound(playerSelection, computerSelection){    
-    // store the player's choice in a variable
-    playerSelection=playerSelection.toLowerCase();
+    
 
     //if player & computer choose the same choice, output DRAW
     if (playerSelection===computerSelection){
