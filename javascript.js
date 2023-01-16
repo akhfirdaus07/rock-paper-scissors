@@ -32,13 +32,14 @@ function playRound(){
 
     logic();
     
-    if (playerScore.textContent===5){
+    
+    if (parseInt(playerScore.textContent)===5){
         gameWinner.textContent="YOU WIN THIS GAME!";
         
         playerScore.textContent=0;
         computerScore.textContent=0;
         roundWinner.textContent="";
-    } else if(computerScore.textContent===5){
+    } else if(parseInt(computerScore.textContent)===5){
         gameWinner.textContent="YOU LOSE THIS GAME!";
 
         playerScore.textContent=0;
