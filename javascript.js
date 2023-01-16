@@ -29,6 +29,7 @@ let gameWinner=document.querySelector(".gameWinner");
 function playRound(){  
     playerSelection=this.classList.value;
     computerSelection=choice[Math.floor(Math.random()*3)];
+    gameWinner.textContent="";
 
     logic();
     
@@ -38,13 +39,11 @@ function playRound(){
         
         playerScore.textContent=0;
         computerScore.textContent=0;
-        roundWinner.textContent="";
     } else if(parseInt(computerScore.textContent)===5){
         gameWinner.textContent="YOU LOSE THIS GAME!";
 
         playerScore.textContent=0;
         computerScore.textContent=0;
-        roundWinner.textContent="";
     };
 
 }
